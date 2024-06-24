@@ -1,0 +1,24 @@
+                                      Lecture-2 GIT and GITHUB
+Taken Whatsapp versions as an example to show the version control system.
+GIT is a VCS or SCM tool (Source code Management tool).
+GIT - GIT is a modern and widely used distributed version control system.
+    - GIT is an open-source distrubuted version control system.
+    - GIT can be used private and public.
+    - Created in 2005.
+    - GIT is foundation of many services like GitHub and GitLab, but we can use Git without using any other Git Services.
+    - Opensource
+    - Scalable
+Distributed control version - Every one haves their own copy of code.
+Monitors and helps to work under same workspace.
+Structure can be distributed or centralised one.
+Branching and Merging.
+How to Download GIT.
+Open Git bash - enter GIT init (Hidden folder is created)
+              - to check the status of folder - GIT status
+              - git add "folder name" - To move to the staging area.
+              - git commit-m "folder name"
+Open GIThub - Create a new repository.
+            - to connect the GIThub repository to local repository.
+            - go to the code and copy the link in the GitHub and paste it in the GitBash teminal.
+            - use gitPush in gitbash teminal to add the repository to it.
+
