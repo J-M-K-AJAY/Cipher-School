@@ -1,0 +1,53 @@
+                                                Lecture-4 Features Of Java.
+Features Of Java - Simple
+                 - Object Oriented
+                 - Platform Independent
+                 - Architectue Neutral
+                 - Portable
+                 - Robust
+                 - Secure
+                 - High Performance
+                 - Multi Threaded
+                 - Distributed
+1) Simple - Easy syntax.
+          - Syntax based on C++.
+          - No complicated features like pointers, operator overloading etc,.
+          - Automatic Garbage Collection to remove unreferenced objects and thus programmers are free from memory management responsibilities.
+2) Object Oriented - Java is Object Oriented programming Language.
+                   - Just like the real world, it is centered on creating objects, manuplating objects and making them work together.
+                   - OOPs is better than procedural programming because it provides great flexibility, modularity, clarity and reusability.
+                   - OOPs is more secure as it provides data hiding features.
+3) Platform Independent - "Write once run anywhere" feature of java makes it platorm independent. It allows a Java Program to run on any operating system like Windows, Linux, Mac or Solaris.
+                        - Other languages like C, C++, etc,. are directly complied into platform specific machine codes.
+                        - An additional layer (class file) is added in java to achieve platform independence.
+JVM (Java Virtual Machine) is responsible to convert the byte code into the machine code.
+JVM itself is platform dependent. There is a seperate JVM available for each opearating system.
+Different JVM produces different binary code for different operating systems.
+Using byte code and differnent JVMs for different operating systems Java achieves its platform independence and makes software development easy to run on different platforms.
+
+4) Architecture Neutral - Java has an essential feature that allows the applications to run easily on different machines with different hardware architecture.
+                        - There are no architecture dependent features, for example, the size of primitive types is fixed.
+                        - In C programming, int data type occupies 2 bytes of memory for 32-bit architecture and 4 bytes of memory for64-bit architecture.
+                        - In java it occupies 4 bytes of memory for both 32 and 64-bit architectures.
+5) Portable - The platform independence and Architecture Neutral features of java makes it portable.
+            - Portable because it facilitates to carry the java bytecode to any platform.
+6) Robust - Means strong/ reliable
+          - Java has eliminated certain types of errors prone programming constructs that are found in other languages.
+          - Using exception handling mechanism, Java can catch and respond to expectional situations, so that a program can continue its normal execution.
+          - Java has a strong memory allocation and garbage collection mechanism.
+          - It does not support pointers, thereby eliminating the possiblities of overwriting memory and corrupting data.
+7) Secure - It is more secure.
+          - Java does not use pointers explicitly.
+          - Java program runs under  an area known as Sand Box.
+          - Security manager determines the accessiblity options of a class, like reading and writing a file to the local disk.
+          - Java uses a public key encryption system to allows the java application transmit over the internet in the secured encrypted form.
+8) High Perfomance - Faster than other traditional interpreted programming languages because java bytecode is "close" to native code.
+                   - But it is not as fast as compiled languages, such as C++, Because java is intrepreted.
+                   - The new JVM is significantly faster than the earlier one. The new JVM uses the technology known as Just-in-Time compilation(JIT).It converts the byte code into machine code on demand basis.
+9) Multi Threaded - Multithreading means a single program having different independent tasks to be performed independently at the same time.
+                  - We can write java programs that deal with many tasks at one by defining multiple threads.
+                  - Multithreading is particularly useful in server applications, a server can serve multipe clients at the same time.
+                  - In java, threads can be created in two ways: by extending Thread class and by implementing Runnable interface.
+10) Distributed - Several computers work together on a network.
+                - It is designed to develop applications that make distributed computing easy and efficient.
+                - This feature of Java makes us able to access files by calling the methods from any machine on the internet.
