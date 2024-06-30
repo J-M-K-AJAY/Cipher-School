@@ -1,0 +1,20 @@
+                                    Lecture-5 Instantiation.
+Conditional Statement: if-else, Only if, nested
+                     : Switch
+Loops (Iteration/Repetition Statements) : for loop
+                                        : while
+                                        : do-while
+Instantiation Process : Creating a variable to store the reference of the object.
+                      : Create an object using 'new' keyword.
+                      : Assigning reference of the created object to the variable.
+Heap & Stack Memory.
+Two types of memory in Java: Stack and Heap.
+Heap : Shared memory.(Primitive Data types and Local variables).
+Stack : every method has its own stack.(Method area).
+                      eg: class Student
+                          {
+                              String name;
+                              int rollno;
+                          }
+Here,
+The variable goes to the Stack and the object goes to the Heap memory. 
