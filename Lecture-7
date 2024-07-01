@@ -1,0 +1,73 @@
+                                                    Lecture-7 Counter Flow.
+class Student{
+    String name;
+    int marks;
+    boolean checkpass()
+    {
+        if(marks>80) return true;
+        return false;
+
+    }
+}
+class Car{
+    int biggernumber(int a, int b, int c)
+    {
+        if(a>b)
+        {
+            if(a>c)
+            {
+                return a;
+            }
+            else {
+                return c;
+            }
+        }
+        else
+        {
+            if(b>c)
+            {
+                return b;
+            }
+            else
+            {
+                return c;
+            }
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Student s1 = new Student();
+        s1.name = "Mohan Kumar AJay";
+        s1.marks = 90;
+
+        Student s2 = new Student();
+        s2.name = "Jagadesh";
+        s2.marks = 29;
+
+        System.out.println(s1.name +" "+s1.marks);
+        System.out.println(s1.checkpass());
+
+        System.out.println(s2.name+" "+s2.marks);
+        System.out.println(s2.checkpass());
+
+        Car c1 = new Car();
+        System.out.println(c1.biggernumber(10,40,50));
+
+        char x = 'T';
+        switch(x)
+        {
+            case 'M':
+                System.out.println("It's Male");
+                break;
+
+            case 'F':
+                System.out.println("It's Female");
+                break;
+
+            default:
+                System.out.println("Its TransGender!");
+        }
+
+    }
+}
