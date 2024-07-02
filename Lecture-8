@@ -1,0 +1,38 @@
+                                            Lecture-8 Loops
+public class Loops {
+    public static void main(String[] args) {
+        System.out.println("Starting For Loops!!");
+        int i;
+        for (i = 1; i <= 30; i++) {
+            System.out.println(i);
+        }
+        System.out.println(i);
+
+        int n = 5;
+        while (n > 0) {
+            System.out.println("Hello!");
+            n--;
+        }
+
+        n = 5;
+        do {
+            System.out.println(n);
+            n--;
+        }
+        while (n > 0);
+
+        System.out.println("**********************");
+
+        int m = 0;
+        while (m > 0) {
+            System.out.println(m);
+            m--;
+        }
+
+        m = 0;
+        do {
+            System.out.println(m);
+            m--;
+        } while (m > 0);
+    }
+}
