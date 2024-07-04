@@ -1,0 +1,69 @@
+                                              Lecture-9 Implementation of Objects and Inheritance.
+class Car
+{
+    String name; //these are called instance reference variables.
+    String color;
+    int year;
+    int maxSpeed;
+}
+class Loops
+{
+    public static void main(String[] args)
+    {
+        Car c1 = new Car();
+        c1.name = "Polo";
+        c1.color = "Blue";
+        c1.year = 2020;
+        c1.maxSpeed = 220;
+
+        System.out.println(c1.name);
+        System.out.println(c1.color);
+        System.out.println(c1.year);
+        System.out.println(c1.maxSpeed+"kmph");
+
+    }
+}
+
+**************************************************************************************************************************************
+
+Types of Variables : Local Reference Variable, Instance Reference Variable.
+1) Local reference variables : Declared within the method in a class or taken as an arguement.
+                          : Occupy memory on stack.
+                          : Will be destroyed when the control leaves the method and the associated object will be eligible for garbage collection.
+
+2) Instance Reference Variables : Declared outside the methods in a class.
+                             : Occupy memory on heap
+                             : Will be retrained in memory till the object is alive
+
+Main features of OOP's : Inheritance, Polymorphism, Abstraction and Encapsulation.
+
+1)Inheritance - Using inheritance, we can create new classes from already existing classes.
+              - Existing class from which new classes are derived are called base/parent/super classes.
+              - New classes are called derived/child/sub classes.
+              - Derived class inherits all the fields and methods from base class and can add their own elements.
+              - Code Resuability is the main benfit of inheritance.
+
+class Shape{ //(Parent class/ Base class/ Super class)
+    double pi = 3.14;
+    double getSquare(int r)
+    {
+        return r*r;
+    }
+}
+class Circle extends Shape{ //(Child class/ Derived class/ Sub class)
+    void area(int r)
+    {
+        System.out.println("area: "+pi*getSquare(r));
+    }
+}
+
+public class Inheritance {
+    public static void main(String[] args)
+    {
+        Circle c = new Circle();
+        c.area(5);
+    }
+}
+************************************************************************************
+Types of Inheritance : Single Level Inheritance, Multi-Level Inheritance, Hierarchicla Inheritance, Hybrid Inheritance.
+Multiple inheritance is not allowed in java(Multiple parent classes) through classes, it is allowed through interfaces.
