@@ -1,0 +1,75 @@
+                                Lecture-9 (Part-2) Polymorphism
+Polymorphism - Poly (Multiple) & Morphism (Forms).
+             - This word is made of 2 words, poly and Morphism.
+             - Polymorphism is the ability to exist in multiple forms.
+             - Polymorphism si an important feature of Object Oriented Programming.
+Polymorphism - Run-time Polymorphism./Method Overriding/Dynamic Binding
+             - Compile-time polymorphism./Method Overloading/Static Binding
+
+1) Run-Time/Method Overriding : Method names should be same in parent class and in child class
+                              : Return types of the method must be same in all classes
+                              : Also the parameters should be same in all the classes.
+class Parent{
+    void info(){
+        System.out.println("Parent Class.");
+    }
+}
+class Child1 extends Parent{
+    void info(){
+        System.out.println("Child-1 Class.");
+    }
+}
+class Child2 extends Parent{
+    void info(){
+        System.out.println("Child-2 Class.");
+    }
+}
+public class Inheritance{
+    public static void main(String[] args)
+    {
+        Parent c1= new Child1();
+        c1.info();
+
+        Parent p2 = new Child2();
+        p2.info();
+
+        Parent p3 = new Parent();
+        p3.info();
+
+    }
+}
+
+
+2) Compile-Time Polymorphism : Compile-time polymorphism is a type of polymorphism which can be achieved at java compilation time.
+                             : Return type should be same in the parent class as well as in the child class but the Method should be also same but with different arguements.
+class Parent{
+    void add(int a, int b){
+        System.out.println("a+b: "+(a+b));
+    }
+}
+class Child1{
+    void add(int a, double b)
+    {
+        System.out.println("double a+b: "+(a+b));
+    }
+}
+class Child2{
+    void add(double a, double b)
+    {
+        System.out.println("Final answer: "+(a+b));
+    }
+}
+public class Inheritance{
+    public static void main(String[] args)
+    {
+        Parent p1 = new Parent();
+        p1.add(3,5);
+
+        Child1 c1 = new Child1();
+        c1.add(4,6.32);
+
+        Child2 c2 = new Child2();
+        c2.add(6.6543, 5.234);
+    }
+}
+
