@@ -1,0 +1,75 @@
+                                                            Lecture -10 Constructors
+class loan {
+    int rate;
+    loan() 
+    {
+        System.out.println("Hi, I'm Default Constructor of Loan");
+    }
+    loan(int rate)
+    {
+        this.rate = rate;
+    }
+    void printRate() 
+    {
+        System.out.println(this.rate);
+    }
+}
+
+
+class Carloan extends loan{
+    int rate;
+    Carloan()
+    {
+        System.out.println("Hi, I'm default constructor of Carloan");
+        System.out.println(super.rate);            //1- using super to access the instance variable of parent class
+    }
+    Carloan(int rate)
+    {
+        super(7);                                  //3 - to invoke the constructor of the parent class(must be 1st line of the constructor)
+        this.rate=rate;
+    }
+    void printRate()
+    {
+        System.out.println(this.rate);
+        super.printRate();                         //2 - using super to invoke methods of the parent class
+        System.out.println(super.rate);
+    }
+}
+
+public class lec_10{
+    public static void main(String args[]){
+        Carloan c1=new Carloan();
+        Carloan c2=new Carloan(8);
+        c2.printRate();
+    }
+}
+
+************************************************************************************************************************************************************
+
+class A{
+    final int noOfAlphabets = 26; //Final Variable s - value once assigned cannot be changed.
+    final int noOfVowls; //Either assign value at the time of declaration or assign the value inside the constructor.
+    A()
+    {
+        noOfVowls = 5;
+    }
+    final void fun(){
+        System.out.println("Hi!, I'm a function in class A");
+    }
+}
+ final class B extends A{ //final class cannot be inherited
+//    void fun(){
+//        System.out.println("I'm function in B overriding Function in A");
+//    }
+}
+
+
+public class FinalStudy   {
+        //Classes can be declared final using keyword final.
+    //Final classes cannot be inherited.
+    //not necessary for a final class to have final methods.
+    //***Final class cannot have abstract methods.
+    //Variables can be declared final using keyword final.
+    // value assigned to find variable once cannot be changed.
+    //find variables must be initialized either at declaration time or inside constructors.
+}
