@@ -1,0 +1,91 @@
+                                          Lecture - 12  Abstract Class and Interface.
+ Data hiding in Java is achieved through Abstraction!
+Interface : An Interface is something like a blueprint of a class.
+          : Interface can have only abstract methods.
+          : They are used to achieve absolute abstraction and multiple inheritance in java.
+          : An interface can have abstract methods and variables.
+          : Variables declared inside interfaces are public, static and final by default. Even if we dont use these keywords explicitly.
+          : Method declaration inside interfaces are public and abstract by default.
+                        Syntax: interface A{
+                                              int x=0; //public, static and final
+                                              void area(int a); //public and abstract
+                                            }
+           : A class can implement an interface using keyword implemnts.
+           : When a class implemnts an interface, it must override all the methods, otherwise it will become abstract and thus cannot be instantiated.
+           : When we override these methods, the access specifier should be public.
+           : Multiple inheritance is allowed in java throught Interfaces.
+           : If a class implements multiple interfaces containing same method declaration then it needs to be overidden only once.
+
+
+interface Shape{
+    double pi = 3.14; //public, static and final
+
+    double getSquare(double r); //public and abstract
+}
+class Circle implements Shape{
+    public double getSquare(double r)
+    {
+        return r*r;
+    }
+    void fun(){
+        System.out.println("Hey! I Implements an interface named shape");
+    }
+}
+public class abstraction{
+    public static void main(String[] args)
+    {
+        Circle c= new Circle();
+        System.out.println(c.getSquare(4));
+        c.fun();
+    }
+}
+
+******************************************************************************************
+
+interface M{
+    int x = 10;
+    void fun();
+}
+interface N{
+    int x = 30;
+    void fun();
+}
+
+class C implements M,N{ //Multiple inheritance in Java.
+    public void fun(){
+        System.out.println("Hello! I'm function In C!");
+        System.out.println(M.x); //Ambiguity resolved using fully qualified name.
+        System.out.println(N.x);
+
+        System.out.println(M.super.hashCode());
+        System.out.println(N.super.hashCode());
+    }
+}
+
+interface O extends M,N{ //Multiple inheritance through interfaces
+    void fun();
+}
+
+class D implements O{
+    public void fun()
+    {
+        System.out.println("Hello! I'm Function in D");
+    }
+}
+
+class abstraction {
+    public static void main(String[] args)
+    {
+        C c = new C();
+        c.fun();
+
+        D d = new D();
+        d.fun();
+    }
+}
+
+***************************************************************************************************
+
+
+IMP* Q)What is the difference between Abstract class and a Interface class?
+
