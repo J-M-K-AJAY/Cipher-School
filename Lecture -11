@@ -1,0 +1,73 @@
+                                                        Lecture - 11 Static Variables and Abstract Class
+Static variables: variables can be declared static using keyword static.
+                : we know that non static variables and methods belong to instance.
+                : On contrary, static members(variables, methods) belong to class. They are not part of any instance of the class.
+                : Static members can be accessed using the class name, even without creating instnace of the class.
+                : They are also called static variables. They occupy single location in the memory.
+
+Static Methods : Methods can be declared static using keyword static.
+               : Static methods use static variables only, whereas non-static methods can use both instance variables and static variables.
+  Abstraction  : Data Abstraction is the process of hiding certain details and showing only essential information to the user.
+               : Abstration can be achieved using abstract classes or interfaces.
+
+Abstract Methods : Methods declared but not implemented are called abstract methods.
+                 :  Abstract methods do not have a body but terminate with a semicolon.
+                 : The keyword abstract must be used in the signature of the method.
+                 : final and static methods cannot be declared abstract.
+                 : Syntex: abstract [accessibility specifier] [return type] methodName(Parameter);
+
+Abstract Classes : A class containing abstract methods is called abstract class. keyword abstract must be used in the class declaration, else compiler will throw an error.
+                 : abstract class cannot be instantiated.
+                              Syntax: abstract className{
+                              }
+                 : abstract Methods are used to force the subclasses to provide the implementation by defining the body.
+                 : if any sub class does not implement all the abstract methods of parent class, it will also be treated as abstract.
+
+*Child class must override all the abstract methods of the parent class also they will also become abstract.
+Abstract class X concert / non-abstract class.
+
+****************************************************************************************************************************************************
+
+abstract class Car{ //we cannot create objects of an abstract class.
+    int maxSpeed;
+    abstract void accelerate(); //Only Declared but not implemented. It is without body.
+    //they are created to force the child classes to implement them before using. we will use them after overriding.
+
+    abstract void brake();
+}
+
+abstract class BMW extends Car{
+    void accelerate(){
+        System.out.println("BMW is accelerating!!!");
+    }
+}
+
+class BMW2 extends BMW{
+    void brake(){
+        System.out.println("BMW Applied Brakes!");
+    }
+}
+
+abstract class A{ //An Abstract class can exist without abstract methods.
+    //We simply mean we will not able to create object[instantiate] of this class.
+    int x = 199;
+    void fun()
+    {
+        System.out.println("Hi! I'm A");
+    }
+}
+
+public class abstraction {
+    public static void main(String[] args)
+    {
+//        Car c = new Car();  Cannot instantiate an abstract class
+//        BMW car = new BMW();
+//        car.accelerate();
+
+//        BMW2 car2 = new BMW2();
+//        car2.accelerate();
+//        car2.brake();
+
+
+    }
+}
