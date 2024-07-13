@@ -1,0 +1,61 @@
+                        Lecture - 15 Array Part - 2.
+Array is an indexed collection of finite number of homogenous elements.
+To access an element in array -> arr[0].
+
+
+                        *CREATING ARRAY:
+package arrays;
+
+public class ArrayPractice {
+    static void print(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int size = 5;
+        int arr[] = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = i + 1;
+        }
+        print(arr);
+
+
+        int changeArr[] = new int[3*size];
+        for (int i=0; i<size; i++)
+        {
+            changeArr[i] = arr[i];
+        }
+        changeArr[5] = 10;
+        changeArr[6] = 9;
+        changeArr[7] = 8;
+        changeArr[8] = 7;
+        changeArr[9] = 6;
+        changeArr[10]= 5;
+        print(changeArr);
+    }
+}
+*****************************************************************************
+
+                      *ADDING ONE
+public class ArrayPractice{
+    static void addOne(int arr[])
+    {
+        for(int i = 0; i<arr.length; i++)
+        {
+            arr[i]++;
+        }
+    }
+    public static void main(String[] args) {
+        int arr[] = {10,11,12,13,14,15,16,17,111};
+        addOne(arr);
+        for(int i = 0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+}
