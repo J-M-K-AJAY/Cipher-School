@@ -1,0 +1,173 @@
+                                                         Lecture - 13 Access Modifiers!
+Access Modifiers of 4 types.
+Default : Default can be accessible within the class and within the package but cannot be accessible outside package by subclass and outside package.
+Private : Private can be accessible within the class and cannot be accessible within the package, outside the package by subclass and outside package.
+Public : Public can be accessible in all scenarios.
+Protected : Protected can be accessilble within the class, within the package and also can be accessed by creating objcect of subclass and cannot be accessed outside the package.
+
+package accessModifiers1;
+
+//AccessModifiers with in the Class
+
+public class A {
+    int x = 10;
+    private int y = 15;
+    public int z = 20;
+    protected int w = 25;
+
+    public static void main(String[] args) {
+        A obj = new A();
+        //default
+        System.out.println(obj.x);
+
+        //private
+        System.out.println(obj.y);
+
+        //public
+        System.out.println(obj.z);
+
+        //protected
+        System.out.println(obj.w);
+    }
+}
+
+************************************************************
+package accessModifiers1;
+
+//AccessModifiers Within the Package.
+
+public class B {
+    public static void main(String[] args) {
+        A obj = new A();                    //default is accessible in outside the class.
+        System.out.println(obj.x);
+
+        //private
+//        System.out.println(obj.y);        //Private is not accessible in outside the class.
+
+        //public
+        System.out.println(obj.z);          //Public is accessible in outside the class.
+
+        //protected
+        System.out.println(obj.w);          //Protected is accessible in outside the class.
+    }
+}
+**************************************************************
+package accessModifiers2;
+
+//AccessModifiers outside the package by subclass
+
+import accessModifiers1.A;
+
+public class C extends A {
+    public static void main(String[] args) {
+        A obj = new A();
+//        System.out.println(obj.x);              //default cannot be accessed outside the package.
+
+        //private
+//        System.out.println(obj.y);              //Private is not accessible outside the package.
+
+        //public
+        System.out.println(obj.z);                //Public is accessible outside the package.
+
+        //protected
+        C childhood = new C();
+        System.out.println(childhood.w);          //Protected will be visible in different package in subclass, using object of subclass only.
+
+    }
+}
+*****************************************************************
+package accessModifiers2;
+
+//AccessModifiers outside the package
+
+import accessModifiers1.A;
+
+public class D {
+    public static void main(String[] args) {
+        A obj = new A();
+//        System.out.println(obj.x);                //Default cannot be accessible outside the package.
+
+        //private
+//        System.out.println(obj.y);                //Private cannot be accessible outside the package.
+
+        //public
+        System.out.println(obj.z);                  //Public can be accessible outside the package.
+
+        //Protected
+//        System.out.println(obj.w);                //Protected cannot be accessible outside package in non-subclass.
+
+    }
+}
+*************************************************************
+
+Encapsulation : Wrapping the data and the method as a single unit is called Encapsulation.
+To achieve encapsulation -> Declare the variables of a class as Private.
+                         -> Provide public methods (Setter and Getter)
+(Setter -> That sets the value)
+(Getter -> That gets the value)
+
+To make something read only -> Give only getter not setter.
+To make something write only -> Give only setter not getter.
+
+Syntax: 
+package Encapsulation;
+
+class Demo{
+    private int a = 5;
+    private int b = 10;
+    private int c = 15;
+    private int d = 20;
+
+    public int getA(){      //getter
+        System.out.println("A was Read!");
+        return this.a;
+    }
+
+    public int getB() {     //Read only.
+        return b;
+    }
+
+    public void setA(int a){    //setter
+        if(a>100) {
+            this.a = a;
+            System.out.println("Value is Changed!");
+        }
+        else {
+            System.out.println("Cannot change outside limits");
+        }
+    }
+
+
+
+//    public void setD(int d){
+//        this.d =d;
+//        System.out.println("value of D is Changed!");
+//    }
+
+
+    public void setD(int d) {
+        this.d = d;
+    }
+    public int getD(){
+        return d;
+    }
+}
+
+
+public class Encapstudy {
+    public static void main(String[] args) {
+        Demo d = new Demo();
+//        System.out.println(d.a);      //Cannot be acceessed due to private class.
+        System.out.println(d.getA());
+
+        d.setA(101);
+        System.out.println(d.getA());
+
+        System.out.println(d.getB());
+
+//        d.setD(999);
+//        System.out.println(d.getD());
+        d.setD(999);
+        System.out.println(d.getD());
+    }
+}
