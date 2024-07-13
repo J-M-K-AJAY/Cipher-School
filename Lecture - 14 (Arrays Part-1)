@@ -1,0 +1,12 @@
+                            Lecture - 14 Arrays Part -1.
+Data Structure -> Ways to store organised Data.
+                _____________________________
+               |  1  |  2  |  3  |  4  |  5  |      -> Array of integers.
+                _____________________________
+    first thing in array index 0, index 1, index -2, etc..,
+int arr[] = new int[size];    -> To create an array!
+in this - arr[] get stored in Stack memory, 
+        - array got stores in Heap memory.
+Array is an object in Java.
+Array is a collection of Homegeneous data. (Similar type of data if it is number, it is Integers)
+Array is a collection of indexed and finit numbers of elements in it.
